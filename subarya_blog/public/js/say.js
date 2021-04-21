@@ -1,4 +1,7 @@
 function say(content, author, from) {
+  content = "ファイトだよ!";
+  author = "—— By 高坂穗乃果";
+  from = "";
   document.querySelector("#say-content").innerText = content;
   if (author) {
     document.querySelector("#say-author").innerText = author;
@@ -13,9 +16,7 @@ if (CONFIG.say.api) {
     .then((res) => {
       if (res.ok) {
         res.json().then((data) => {
-          data.hitokoto="ファイトだよ! —— By 高坂穗乃果"
-          say(data.hitokoto);
-          /*if (CONFIG.say.hitokoto) {
+          if (CONFIG.say.hitokoto) {
             say(data.hitokoto, data.from_who, data.from);
           } else {
             let sentence = data[Math.floor(Math.random() * data.length)];
@@ -24,7 +25,7 @@ if (CONFIG.say.api) {
             } else {
               say(sentence);
             }
-          }*/
+          }
         });
       } else {
         throw new Error(
@@ -33,6 +34,6 @@ if (CONFIG.say.api) {
       }
     })
     .catch((err) => {
-      console.log("error: " + err.message);
+      console.error(err.message);
     });
 }

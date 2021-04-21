@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: SubaRya
+title: スバリャノブログ
 subtitle: ''
 description: ''
 keywords:
@@ -15,7 +15,7 @@ keywords:
   - 競程
   - 演算法
 author: SubaRya
-language: en
+language: zh-TW
 timezone: ''
 
 # URL
